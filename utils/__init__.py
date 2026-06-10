@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
-# core: project helpers (utils, data_utils, tabular). Named to avoid shadowing torchquad's utils.
+# utils: project helpers (utils, data_utils, tabular, sampling, visualization, logger).
 from . import utils
 from . import data_utils
