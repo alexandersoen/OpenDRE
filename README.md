@@ -518,7 +518,7 @@ OpenDRE/
 ├── pl_models/        # Lightning modules per task
 ├── nn_models/        # Model architectures (tabular_models, image_models, legacy UnifiedModel wrapper, plus layers)
 ├── nsf/              # Original NSF codebase (flows, datasets, experiments, checkpoints)
-├── dre/              # Core DRE components: paths, losses, estimators, polynomial bases
+├── dre/              # Core DRE components: paths, losses, estimators
 ├── core/             # Utils, data_utils, logger, sampling, visualization, helper scripts
 └── results/          # Experiment logs, figures, and tables
 ```
