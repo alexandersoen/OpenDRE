@@ -153,6 +153,7 @@ class ResidualBlockWithTime(nn.Module):
     """ResidualBlock with time injection."""
     def __init__(self, in_dim, out_dim, embed_dim, activation, dropout=0.1, norm=True, use_spectral_norm=False, pre_norm=True):
         super().__init__()
+        self.embed_dim = embed_dim
         if use_spectral_norm:
             self.linear = nn.utils.spectral_norm(nn.Linear(in_dim, out_dim))
         else:

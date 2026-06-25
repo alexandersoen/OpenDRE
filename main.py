@@ -224,8 +224,9 @@ def train_likelihood_estimation(args):
         trainer.test(pl_model, datamodule=datamodule)
         
         # Evaluate best model based on validation metric
-        best_model = model_module_name.load_from_checkpoint(checkpoint_callback.best_model_path, strict=False)
-        trainer.test(best_model, datamodule=datamodule)
+        if checkpoint_callback in callbacks and checkpoint_callback.best_model_path:
+            best_model = model_module_name.load_from_checkpoint(checkpoint_callback.best_model_path, strict=False)
+            trainer.test(best_model, datamodule=datamodule)
 
 def train_fdiv_estimation(args):
     # Setup directories and logging
